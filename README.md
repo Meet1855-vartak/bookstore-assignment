@@ -1,16 +1,31 @@
-# React + Vite
+# 📚 The Book Nook - Bookstore E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful and elegant bookstore homepage built with React + Vite.
 
-Currently, two official plugins are available:
+## 🛠️ Built With
+- React
+- Vite
+- JavaScript
+- CSS (Inline Styles)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📦 Components
+- Navbar
+- HeroSection
+- Categories
+- BookCards
+- WhyChooseUs
+- Footer
 
-## React Compiler
+## 🚀 How to Run
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📸 Screenshots
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="1901" height="910" alt="image" src="https://github.com/user-attachments/assets/47154ee9-be64-41b6-a366-6822a24e9140" />
+<img width="1899" height="909" alt="image" src="https://github.com/user-attachments/assets/75ab74e8-1707-4f5b-a0dc-d62d7e349ec8" />
+<img width="1900" height="902" alt="image" src="https://github.com/user-attachments/assets/c925817e-13cf-4a56-92f9-47107e0e23df" />
+<img width="1902" height="807" alt="image" src="https://github.com/user-attachments/assets/0242fddf-e7e0-4fe5-9ec9-845223603be6" />
+<img width="1904" height="593" alt="image" src="https://github.com/user-attachments/assets/63543e24-693d-47bc-9d59-7ee67151f8fd" />
