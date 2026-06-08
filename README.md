@@ -28,6 +28,7 @@ A beautiful and elegant bookstore website built with React + Vite, featuring a c
 
 ## 📁 File Structure
 
+```
 src/
 ├── components/
 │   ├── Navbar.jsx
@@ -42,6 +43,7 @@ src/
 ├── App.css
 ├── index.css
 └── main.jsx
+```
 
 ---
 
