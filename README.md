@@ -1,6 +1,6 @@
 # 📚 The Book Nook - Bookstore E-Commerce Website
 
-A beautiful and elegant bookstore website built with React + Vite, featuring a classic cream, brown and gold theme with multipage navigation using React Router.
+A beautiful and elegant bookstore website built with React + Vite, featuring a classic cream, brown and gold theme with multipage navigation using React Router and Supabase database integration.
 
 ---
 
@@ -20,6 +20,7 @@ A beautiful and elegant bookstore website built with React + Vite, featuring a c
 - Vite
 - JavaScript
 - React Router DOM
+- Supabase (Database)
 - CSS Inline Styles
 - Google Fonts (Playfair Display + Raleway)
 - Font Awesome Icons
@@ -42,7 +43,8 @@ src/
 ├── App.jsx
 ├── App.css
 ├── index.css
-└── main.jsx
+├── main.jsx
+└── supabase.js
 ```
 
 ---
@@ -53,7 +55,7 @@ src/
 
 **HeroSection** - Landing page with real book covers, tagline, call to action buttons and store statistics.
 
-**BookCards** - Featured books section with cover images, genre, author, price and add to cart button.
+**BookCards** - Featured books with Supabase integration. Users can sell their old books by filling a form. Books are saved to the database and displayed with a condition badge.
 
 **Categories** - Browse books by genre displayed in a clean grid layout with icons.
 
@@ -64,6 +66,25 @@ src/
 **Contact** - Contact form with name, email, subject and message fields along with store information.
 
 **Footer** - Quick links, categories, contact info, social media icons and copyright.
+
+---
+
+## 🗄️ Database
+
+Powered by **Supabase** with a `books` table containing:
+
+- id — Auto generated unique ID
+- title — Book title
+- author — Author name
+- genre — Book genre
+- price — Book price
+- image — Book cover image URL
+- condition — Book condition (Like New / Good / Old)
+
+**Features:**
+- Users can list their old books for sale using the Sell Your Old Book form
+- Books are saved to Supabase and fetched on page load
+- Each user-listed book shows a condition badge on the card
 
 ---
 
@@ -79,11 +100,15 @@ src/
 
 ## 🚀 How to Run
 
-```bash
+```
+bash
 npm install
 npm run dev
 ```
 
+---
+
+© 2026 The Book Nook. All rights reserved.
 ---
 
 ## 📸 Screenshots
@@ -93,7 +118,10 @@ npm run dev
 <img width="1891" height="903" alt="image" src="https://github.com/user-attachments/assets/83b733d5-4350-42e4-aca4-eb61175ce988" />
 
 ### 📚 Books Page
-<img width="1900" height="910" alt="image" src="https://github.com/user-attachments/assets/0095b7c9-5c9d-4309-adc3-23f7dbfe443d" />
+<img width="1893" height="904" alt="image" src="https://github.com/user-attachments/assets/8ca061ff-1ac7-4d64-b75c-1f6cf774782b" />
+<img width="1896" height="901" alt="image" src="https://github.com/user-attachments/assets/bb4a1993-6464-4633-b0bd-5d397644f255" />
+<img width="1893" height="903" alt="image" src="https://github.com/user-attachments/assets/91b1f8fc-5266-4c87-b489-983412dca8b3" />
+
 
 ### 🗂️ Categories Page
 <img width="1898" height="907" alt="image" src="https://github.com/user-attachments/assets/d40f8448-303f-4f7f-85d6-348dc449bc1a" />
