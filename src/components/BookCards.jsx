@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../supabase'
+import { useAuth } from '../AuthContext'
 
 const styles = {
   section: {
@@ -245,6 +246,7 @@ const defaultBooks = [
 function BookCards() {
   const [showForm, setShowForm] = useState(false)
   const [dbBooks, setDbBooks] = useState([])
+  const { user } = useAuth()
   const [form, setForm] = useState({
     title: '',
     author: '',
@@ -285,10 +287,11 @@ function BookCards() {
       <p style={styles.tag}>★ Hand Picked For You</p>
       <h2 style={styles.heading}>Featured Books</h2>
       <p style={styles.subtext}>Explore our most loved titles this season</p>
-
-      <button style={styles.sellBtn} onClick={() => setShowForm(!showForm)}>
-        📖 Sell Your Old Book
-      </button>
+      {user && (
+        <button style={styles.sellBtn} onClick={() => setShowForm(!showForm)}>
+          📖 Sell Your Old Book
+        </button>
+      )}    
 
       {showForm && (
         <div style={styles.form}>

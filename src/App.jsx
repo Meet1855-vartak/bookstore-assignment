@@ -7,6 +7,7 @@ import BookCards from './components/BookCards'
 import WhyChooseUs from './components/WhyChooseUs'
 import About from './components/About'
 import Contact from './components/Contact'
+import Auth from './components/Auth'
 
 function Home() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/bookcards" element={<BookCards />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
       <Footer />
     </>

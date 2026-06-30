@@ -1,4 +1,5 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../AuthContext'
 
 const styles = {
   navbar: {
@@ -54,6 +55,28 @@ const styles = {
     paddingBottom: '4px',
     borderBottom: '2px solid #C8972B',
   },
+  rightSide: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+  },
+  userEmail: {
+    fontFamily: 'Raleway, sans-serif',
+    fontSize: '0.8rem',
+    color: '#5C3D2E',
+  },
+  authBtn: {
+    backgroundColor: '#2C1810',
+    color: '#F5F0E8',
+    border: 'none',
+    padding: '0.6rem 1.5rem',
+    fontFamily: 'Raleway, sans-serif',
+    fontWeight: '600',
+    fontSize: '0.8rem',
+    letterSpacing: '0.1em',
+    textTransform: 'uppercase',
+    cursor: 'pointer',
+  },
   cartBtn: {
     backgroundColor: '#C8972B',
     color: '#F5F0E8',
@@ -78,6 +101,13 @@ const navLinks = [
 
 function Navbar() {
   const location = useLocation()
+  const navigate = useNavigate()
+  const { user, signOut } = useAuth()
+
+  async function handleLogout() {
+    await signOut()
+    navigate('/')
+  }
 
   return (
     <nav style={styles.navbar}>
@@ -96,7 +126,17 @@ function Navbar() {
           </li>
         ))}
       </ul>
-      <button style={styles.cartBtn}>🛒 Cart</button>
+      <div style={styles.rightSide}>
+        {user ? (
+          <>
+            <span style={styles.userEmail}>👤 {user.email}</span>
+            <button style={styles.authBtn} onClick={handleLogout}>Logout</button>
+          </>
+        ) : (
+          <button style={styles.authBtn} onClick={() => navigate('/auth')}>Login</button>
+        )}
+        <button style={styles.cartBtn}>🛒 Cart</button>
+      </div>
     </nav>
   )
 }
